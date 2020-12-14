@@ -3,7 +3,6 @@ import IllustrationSVG from '../../images/illustration.svg'
 
 export const Container = styled.div`
   margin-top: ${props => props.theme.sizes(20)};
-  margin-left: ${props => props.theme.sizes(20)};
 
 `
 

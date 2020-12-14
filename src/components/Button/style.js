@@ -20,3 +20,10 @@ export const BaseButtonLink = styled.a`
   ${baseStyle}
   text-decoration: none;
 `
+
+export const BaseOutlinedButton = styled.button`
+  ${baseStyle}
+  background: ${props => props.selected ? props.theme.colors.primary : 'white'};
+  border: 1px solid ${props => props.theme.colors.primary};
+  color: ${props => props.selected ? 'white' : props.theme.colors.primary};
+`

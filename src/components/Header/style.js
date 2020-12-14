@@ -8,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: ${props => props.theme.sizes(4)} ${props => props.theme.sizes(20)};
+  margin: ${props => props.theme.sizes(4)} 0;
 `
 
 export const Logo = styled.div`
