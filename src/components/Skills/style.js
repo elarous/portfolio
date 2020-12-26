@@ -46,5 +46,19 @@ export const SkillsSlider = styled(Slider)`
 `
 
 export const SkillsSlide = styled(Slide)`
+  
+`
 
+export const List = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: ${props => props.theme.sizes(3)};
+`
+
+export const IconContainer = styled.div`
+  border-radius: ${props => props.theme.sizes(1)};
+  height: ${props => props.theme.sizes(5)};
+  width: ${props => props.theme.sizes(5)};
+  margin-right: ${props => props.theme.sizes(2)};
 `
