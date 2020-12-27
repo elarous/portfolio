@@ -9,17 +9,14 @@ import {
   SkillsSlider,
   SkillsSlide,
   List,
-  ReactLogo,
   IconContainer,
 } from "./style";
+import { Title } from "./components/Item/style";
 import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Item from "./components/Item";
 import Img from "gatsby-image";
-
 import ReactSVG from "../../images/logos/react_logo.svg";
-// import JavascriptPNG from "../../images/logos/javascript.png";
-// import ClojureScriptPNG from "../../images/clojurescript.png";
 
 function Skills({ data }) {
   const [index, setIndex] = useState(0);
@@ -50,32 +47,34 @@ function Skills({ data }) {
               <SkillsSlide index={0}>
                 <List>
                   <Item
+                    percent={80}
                     icon={
                       <IconContainer>
                         <Img fixed={data.javascript.logo.fixed} />
-                        {/* <Img fixed={{ src: JavascriptPNG }} /> */}
                       </IconContainer>
                     }
                   >
-                    Javascript
+                    <Title>Javascript</Title>
                   </Item>
                   <Item
+                    percent={90}
                     icon={
                       <IconContainer>
                         <ReactSVG />
                       </IconContainer>
                     }
                   >
-                    React
+                    <Title>React</Title>
                   </Item>
                   <Item
+                    percent={95}
                     icon={
                       <IconContainer>
                         <Img fixed={data.clojurescript.logo.fixed} />
                       </IconContainer>
                     }
                   >
-                    ClojureScript
+                    <Title>ClojureScript</Title>
                   </Item>
                 </List>
               </SkillsSlide>
