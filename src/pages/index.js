@@ -45,6 +45,30 @@ export const query = graphql`
         }
       }
     }
+
+    redux: file(relativePath: { eq: "logos/redux.png"}) {
+      logo: childImageSharp {
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    styled_components: file(relativePath: { eq: "logos/styled_components.png"}) {
+      logo: childImageSharp {
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    re_frame: file(relativePath: { eq: "logos/re_frame.png"}) {
+      logo: childImageSharp {
+        fixed(width: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `
 

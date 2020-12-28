@@ -76,6 +76,38 @@ function Skills({ data }) {
                   >
                     <Title>ClojureScript</Title>
                   </Item>
+                  <Item
+                    percent={75}
+                    icon={
+                      <IconContainer>
+                        <Img fixed={data.redux.logo.fixed} />
+                      </IconContainer>
+                    }
+                  >
+                    <Title>Redux</Title>
+                  </Item>
+                  <Item
+                    percent={85}
+                    icon={
+                      <IconContainer>
+                        <Img fixed={data.styled_components.logo.fixed} />
+                      </IconContainer>
+                    }
+                  >
+                    <Title>Styled components</Title>
+                  </Item>
+                  <Item
+                    percent={90}
+                    icon={
+                      <IconContainer>
+                        <Img fixed={data.re_frame.logo.fixed} />
+                      </IconContainer>
+                    }
+                  >
+                    <Title>
+                      Re-frame
+                    </Title>
+                  </Item>
                 </List>
               </SkillsSlide>
               <SkillsSlide index={1}>Back-end</SkillsSlide>

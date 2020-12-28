@@ -57,8 +57,16 @@ export const List = styled.div`
 `
 
 export const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: ${props => props.theme.sizes(1)};
   height: ${props => props.theme.sizes(5)};
   width: ${props => props.theme.sizes(5)};
   margin-right: ${props => props.theme.sizes(2)};
+
+  & > svg {
+    height: 100%;
+    width: 100%;
+  }
 `
