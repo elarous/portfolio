@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Javascript",
+    "type": "frontend",
+    "image": "./images/logos/javascript.png"
+  },
+  {
+    "name": "React",
+    "type": "frontend",
+    "image": "./images/logos/react_logo.svg"
+  }
+]

@@ -65,6 +65,11 @@ export const IconContainer = styled.div`
   width: ${props => props.theme.sizes(5)};
   margin-right: ${props => props.theme.sizes(2)};
 
+  & > * {
+    height: 100%;
+    width: 100%;
+  }
+
   & > svg {
     height: 100%;
     width: 100%;

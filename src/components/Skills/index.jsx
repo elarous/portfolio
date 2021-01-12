@@ -21,6 +21,8 @@ import ReactSVG from "../../images/logos/react_logo.svg";
 function Skills({ data }) {
   const [index, setIndex] = useState(0);
 
+  console.log('data : ', data)
+
   return (
     <Section title="skills & technologies" tag="skills">
       <Container>
@@ -46,68 +48,21 @@ function Skills({ data }) {
             <SkillsSlider>
               <SkillsSlide index={0}>
                 <List>
-                  <Item
-                    percent={80}
-                    icon={
-                      <IconContainer>
-                        <Img fixed={data.javascript.logo.fixed} />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>Javascript</Title>
-                  </Item>
-                  <Item
-                    percent={90}
-                    icon={
-                      <IconContainer>
-                        <ReactSVG />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>React</Title>
-                  </Item>
-                  <Item
-                    percent={95}
-                    icon={
-                      <IconContainer>
-                        <Img fixed={data.clojurescript.logo.fixed} />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>ClojureScript</Title>
-                  </Item>
-                  <Item
-                    percent={75}
-                    icon={
-                      <IconContainer>
-                        <Img fixed={data.redux.logo.fixed} />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>Redux</Title>
-                  </Item>
-                  <Item
-                    percent={85}
-                    icon={
-                      <IconContainer>
-                        <Img fixed={data.styled_components.logo.fixed} />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>Styled components</Title>
-                  </Item>
-                  <Item
-                    percent={90}
-                    icon={
-                      <IconContainer>
-                        <Img fixed={data.re_frame.logo.fixed} />
-                      </IconContainer>
-                    }
-                  >
-                    <Title>
-                      Re-frame
-                    </Title>
-                  </Item>
+                  {data.map((skill) => (
+                    <Item percent={99}
+                      icon={
+                        <IconContainer>
+                          {skill.image.childInlineSvg ?
+                            <div dangerouslySetInnerHTML={{ __html: skill.image.childInlineSvg?.content}} />
+                            :
+                            <Img fixed={skill.image.childImageSharp.fixed} />
+                          }
+                        </IconContainer>
+                      }
+                    >
+                      {skill.name}
+                    </Item>
+                  ))}
                 </List>
               </SkillsSlide>
               <SkillsSlide index={1}>Back-end</SkillsSlide>

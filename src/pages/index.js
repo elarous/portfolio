@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
           <Header />
           <Hero />
         </Section>
-        <Skills data={data}/>
+        <Skills data={data.allSkillsJson.edges.map((e) => e.node)} />
       </main>
     </ThemeProvider>
   );
@@ -30,15 +30,29 @@ const Button = styled.button`
 
 export const query = graphql`
   query {
-    javascript: file(relativePath: { eq: "logos/javascript.png"}) {
-      logo: childImageSharp {
-        fixed(width: 40, height: 40) {
-          ...GatsbyImageSharpFixed
+    allSkillsJson {
+      edges {
+        node {
+          name
+          type
+          image {
+            id
+            absolutePath
+            extension
+            childInlineSvg {
+              content
+            }
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
         }
       }
     }
-    
-    clojurescript: file(relativePath: { eq: "logos/clojurescript.png"}) {
+
+    javascript: file(relativePath: { eq: "logos/javascript.png" }) {
       logo: childImageSharp {
         fixed(width: 40, height: 40) {
           ...GatsbyImageSharpFixed
@@ -46,7 +60,7 @@ export const query = graphql`
       }
     }
 
-    redux: file(relativePath: { eq: "logos/redux.png"}) {
+    clojurescript: file(relativePath: { eq: "logos/clojurescript.png" }) {
       logo: childImageSharp {
         fixed(width: 40, height: 40) {
           ...GatsbyImageSharpFixed
@@ -54,7 +68,7 @@ export const query = graphql`
       }
     }
 
-    styled_components: file(relativePath: { eq: "logos/styled_components.png"}) {
+    redux: file(relativePath: { eq: "logos/redux.png" }) {
       logo: childImageSharp {
         fixed(width: 40, height: 40) {
           ...GatsbyImageSharpFixed
@@ -62,7 +76,17 @@ export const query = graphql`
       }
     }
 
-    re_frame: file(relativePath: { eq: "logos/re_frame.png"}) {
+    styled_components: file(
+      relativePath: { eq: "logos/styled_components.png" }
+    ) {
+      logo: childImageSharp {
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    re_frame: file(relativePath: { eq: "logos/re_frame.png" }) {
       logo: childImageSharp {
         fixed(width: 40) {
           ...GatsbyImageSharpFixed
@@ -70,6 +94,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export default IndexPage;
