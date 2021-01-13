@@ -1,12 +1,93 @@
 [
   {
     "name": "Javascript",
+    "strength": 90,
     "type": "frontend",
     "image": "./images/logos/javascript.png"
   },
   {
     "name": "React",
+    "strength": 95,
     "type": "frontend",
     "image": "./images/logos/react_logo.svg"
+  },
+  {
+    "name": "Redux",
+    "strength": 80,
+    "type": "frontend",
+    "image": "./images/logos/redux.png"
+  },
+  {
+    "name": "Styled Components",
+    "strength": 95,
+    "type": "frontend",
+    "image": "./images/logos/styled_components.png"
+  },
+  {
+    "name": "ClojureScript",
+    "strength": 90,
+    "type": "frontend",
+    "image": "./images/logos/clojurescript.png"
+  },
+  {
+    "name": "Re-frame",
+    "strength": 95,
+    "type": "frontend",
+    "image": "./images/logos/re_frame.png"
+  },
+  {
+    "name": "Typescript",
+    "strength": 80,
+    "type": "frontend",
+    "image": "./images/logos/typescript.svg"
+  },
+  {
+    "name": "NextJs",
+    "strength": 80,
+    "type": "frontend",
+    "image": "./images/logos/nextjs.svg"
+  },
+
+  {
+    "name": "Javascript",
+    "strength": 80,
+    "type": "backend",
+    "image": "./images/logos/javascript.png"
+  },
+  {
+    "name": "Typescript",
+    "strength": 80,
+    "type": "backend",
+    "image": "./images/logos/typescript.svg"
+  },
+  {
+    "name": "Ruby",
+    "strength": 90,
+    "type": "backend",
+    "image": "./images/logos/ruby.svg"
+  },
+  {
+    "name": "Ruby on Rails",
+    "strength": 90,
+    "type": "backend",
+    "image": "./images/logos/ror.svg"
+  },
+  {
+    "name": "Clojure",
+    "strength": 95,
+    "type": "backend",
+    "image": "./images/logos/clojure.svg"
+  },
+  {
+    "name": "Postgres",
+    "strength": 80,
+    "type": "backend",
+    "image": "./images/logos/postgres.png"
+  },
+  {
+    "name": "Datomic",
+    "strength": 75,
+    "type": "backend",
+    "image": "./images/logos/datomic.png"
   }
 ]

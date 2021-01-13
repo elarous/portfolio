@@ -21,22 +21,19 @@ import ReactSVG from "../../images/logos/react_logo.svg";
 function Skills({ data }) {
   const [index, setIndex] = useState(0);
 
-  console.log('data : ', data)
+  const categoriesSet = new Set(data.map((skill) => skill.type));
+  const categories = Array.from(categoriesSet);
 
   return (
     <Section title="skills & technologies" tag="skills">
       <Container>
         <Illustration />
         <Nav>
-          <CategoryBtn selected={index === 0} onClick={() => setIndex(0)}>
-            Front-End
-          </CategoryBtn>
-          <CategoryBtn selected={index === 1} onClick={() => setIndex(1)}>
-            Back-End
-          </CategoryBtn>
-          <CategoryBtn selected={index === 2} onClick={() => setIndex(2)}>
-            Others
-          </CategoryBtn>
+          {categories.map((category, i) => (
+            <CategoryBtn selected={index === i} onClick={() => setIndex(i)}>
+              {category}
+            </CategoryBtn>
+          ))}
         </Nav>
         <SliderContainer>
           <CarouselProvider
@@ -46,25 +43,32 @@ function Skills({ data }) {
             currentSlide={index}
           >
             <SkillsSlider>
-              <SkillsSlide index={0}>
-                <List>
-                  {data.map((skill) => (
-                    <Item percent={99}
-                      icon={
-                        <IconContainer>
-                          {skill.image.childInlineSvg ?
-                            <div dangerouslySetInnerHTML={{ __html: skill.image.childInlineSvg?.content}} />
-                            :
-                            <Img fixed={skill.image.childImageSharp.fixed} />
-                          }
-                        </IconContainer>
-                      }
-                    >
-                      {skill.name}
-                    </Item>
-                  ))}
-                </List>
-              </SkillsSlide>
+              {Array.from(categories).map((category, i) => (
+                <SkillsSlide index={i}>
+                  <List>
+                    {data.filter(skill => skill.type === category).map((skill) => (
+                      <Item
+                        percent={skill.strength}
+                        icon={
+                          <IconContainer>
+                            {skill.image.childInlineSvg ? (
+                              <div 
+                                dangerouslySetInnerHTML={{
+                                  __html: skill.image.childInlineSvg?.content,
+                                }}
+                              />
+                            ) : (
+                              <Img fixed={skill.image.childImageSharp.fixed} />
+                            )}
+                          </IconContainer>
+                        }
+                      >
+                        {skill.name}
+                      </Item>
+                    ))}
+                  </List>
+                </SkillsSlide>
+              ))}
               <SkillsSlide index={1}>Back-end</SkillsSlide>
               <SkillsSlide index={2}>Other</SkillsSlide>
             </SkillsSlider>

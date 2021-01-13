@@ -41,9 +41,7 @@ export const CategoryBtn = styled(OutlinedButton)`
 export const SliderContainer = styled.div`
 `
 
-export const SkillsSlider = styled(Slider)`
-  height: ${props => props.theme.sizes(40)};
-`
+export const SkillsSlider = styled(Slider)``
 
 export const SkillsSlide = styled(Slide)`
   
@@ -64,6 +62,12 @@ export const IconContainer = styled.div`
   height: ${props => props.theme.sizes(5)};
   width: ${props => props.theme.sizes(5)};
   margin-right: ${props => props.theme.sizes(2)};
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   & > * {
     height: 100%;

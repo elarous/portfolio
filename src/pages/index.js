@@ -35,6 +35,7 @@ export const query = graphql`
         node {
           name
           type
+          strength
           image {
             id
             absolutePath
