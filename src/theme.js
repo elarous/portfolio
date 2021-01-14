@@ -4,6 +4,7 @@ const theme = {
     primary: "#d81159",
     secondary: "#73d2de",
     primaryText: "#503b44",
+    secondaryText: "#536B74",
     greyLight: '#FAFAFA',
     greyDark: '#E5E5E5'
   },

@@ -11,12 +11,11 @@ import {
   List,
   IconContainer,
 } from "./style";
-import { Title } from "./components/Item/style";
-import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel";
+import { CarouselProvider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Item from "./components/Item";
+import { Title } from "./components/Item/style"
 import Img from "gatsby-image";
-import ReactSVG from "../../images/logos/react_logo.svg";
 
 function Skills({ data }) {
   const [index, setIndex] = useState(0);
@@ -63,7 +62,7 @@ function Skills({ data }) {
                           </IconContainer>
                         }
                       >
-                        {skill.name}
+                        <Title>{skill.name}</Title>
                       </Item>
                     ))}
                   </List>

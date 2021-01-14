@@ -27,12 +27,7 @@ export const Right = styled.div`
 
 export const Title = styled.div`
   font-family: ${props => props.theme.fonts.main};
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.secondaryText};
   font-size: ${props => props.theme.sizes(2)};
   font-weight: bold;
-`
-
-export const Description = styled.div`
-  font-family: ${props => props.theme.fonts.main};
-  color: ${props => props.theme.colors.greyDark};
 `
