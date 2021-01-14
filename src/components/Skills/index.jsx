@@ -69,8 +69,6 @@ function Skills({ data }) {
                   </List>
                 </SkillsSlide>
               ))}
-              <SkillsSlide index={1}>Back-end</SkillsSlide>
-              <SkillsSlide index={2}>Other</SkillsSlide>
             </SkillsSlider>
           </CarouselProvider>
         </SliderContainer>
