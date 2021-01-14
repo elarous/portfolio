@@ -4,6 +4,7 @@ import theme from "../theme";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
+import Work from "../components/Work";
 import Section from "../components/Section";
 import "fontsource-open-sans";
 import { graphql } from "gatsby";
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => {
           <Hero />
         </Section>
         <Skills data={data.allSkillsJson.edges.map((e) => e.node)} />
+        <Work />
       </main>
     </ThemeProvider>
   );

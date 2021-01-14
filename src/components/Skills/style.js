@@ -11,6 +11,7 @@ import {
 
 export const Container = styled.div`
   position: relative;
+  max-height: ${props => props.theme.sizes(80)}
 `
 
 export const Illustration = styled(IllustrationSVG)`
