@@ -42,7 +42,9 @@ export const CategoryBtn = styled(OutlinedButton)`
 export const SliderContainer = styled.div`
 `
 
-export const SkillsSlider = styled(Slider)``
+export const SkillsSlider = styled(Slider)`
+  height: ${props => props.theme.sizes(80)};
+`
 
 export const SkillsSlide = styled(Slide)`
   
