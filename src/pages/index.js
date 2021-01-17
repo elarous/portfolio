@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
           <Hero />
         </Section>
         <Skills data={data.allSkillsJson.edges.map((e) => e.node)} />
-        <Work />
+        <Work data={data.allProjectsJson.edges.map((e) => e.node)} />
       </main>
     </ThemeProvider>
   );
@@ -47,6 +47,29 @@ export const query = graphql`
             }
             childImageSharp {
               fixed {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+
+    allProjectsJson {
+      edges {
+        node {
+          name
+          description
+          url
+          image {
+            id
+            absolutePath
+            extension
+            childInlineSvg {
+              content
+            }
+            childImageSharp {
+              fluid {
                 src
               }
             }

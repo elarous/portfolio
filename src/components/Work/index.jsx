@@ -1,12 +1,20 @@
 import React from "react";
 import Section from "../Section";
-import { CarouselProvider } from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+import Item from "./components/Item";
+import Img from "gatsby-image";
 
-function Work() {
+function Work({ data }) {
   return (
     <Section title="Latest work" tag="latest_work">
-      Latest work
+      {data.map((project) => (
+        <Item
+          key="some"
+          image={<Img fluid={ project.image.childImageSharp.fluid } />}
+          name={project.name}
+          description={project.description}
+          url={project.url}
+        />
+      ))}
     </Section>
   );
 }
