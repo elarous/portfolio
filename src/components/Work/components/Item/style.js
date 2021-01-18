@@ -9,6 +9,7 @@ export const Container = styled.div`
   background: ${props => props.theme.colors.greyLight};
   width: ${props => props.theme.sizes(40)};
   box-shadow: ${props => props.theme.shadows.high};
+  margin: ${props => props.theme.sizes(3)} ${props => props.theme.sizes(1)};
 `
 
 export const Image = styled.div`

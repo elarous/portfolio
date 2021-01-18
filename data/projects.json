@@ -4,5 +4,47 @@
     "description": "Schedule and Organize effective one on one meetings",
     "image": "./images/projects/vidman.png",
     "url": "https://vidman.app/"
+  },
+  {
+    "name": "O2SN",
+    "description": "Open Source News Social Network, platform to share and rate news",
+    "image": "./images/projects/o2sn.png",
+    "url": "https://github.com/elarous/O2SN"
+  },
+  {
+    "name": "Pomodoro",
+    "description": "A Simple Pomodoro clock",
+    "image": "./images/projects/pomodoro.png",
+    "url": "https://elarous.github.io/pomodoro_fcc/"
+  },
+  {
+    "name": "Tree map",
+    "description": "Tree map chart using D3.js",
+    "image": "./images/projects/tree_map.png",
+    "url": "https://elarous.github.io/d3_tree_map_fcc/"
+  },
+  {
+    "name": "Choropleth map",
+    "description": "Choropleth map using D3.js",
+    "image": "./images/projects/choropleth.png",
+    "url": "https://elarous.github.io/d3_choropleth_map_fcc/"
+  },
+  {
+    "name": "Heat map",
+    "description": "Heat map using D3.js",
+    "image": "./images/projects/heat_map.png",
+    "url": "https://elarous.github.io/d3_heat_map_fcc/"
+  },
+  {
+    "name": "Bar chart",
+    "description": "Bar chart using D3.js",
+    "image": "./images/projects/bar_chart.png",
+    "url": "https://elarous.github.io/d3_bar_chart_fcc/"
+  },
+  {
+    "name": "Calculator",
+    "description": "A Calculator using React",
+    "image": "./images/projects/calculator.png",
+    "url": "https://elarous.github.io/calculator_fcc/"
   }
 ]
