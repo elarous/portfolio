@@ -1,12 +1,14 @@
 import React from "react";
-import { Container, Header } from "./style";
+import { Container, Header, HeaderContainer, BodyContainer } from "./style";
 
-function Section({ title, tag, children }) {
+function Section({ title, tag, wide, className, children }) {
   return (
-    <Container>
-      <a href="#" name={tag} />
-      <Header>{title}</Header>
-      {children}
+    <Container className={className}>
+      <HeaderContainer>
+        <a href="#" name={tag} />
+        {title && <Header>{title}</Header>}
+      </HeaderContainer>
+      <BodyContainer wide={wide}>{children}</BodyContainer>
     </Container>
   );
 }

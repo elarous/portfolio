@@ -5,22 +5,28 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Work from "../components/Work";
+import Contact from '../components/Contact'
 import Section from "../components/Section";
+import { Illustration } from "../components/Hero/style"
 import "fontsource-open-sans";
 import { graphql } from "gatsby";
+import GlobalStyle from '../globalStyles'
 
 // markup
 const IndexPage = ({ data }) => {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <main>
         <title>Oussama El Arbaoui</title>
         <Section>
           <Header />
           <Hero />
+          <Illustration />
         </Section>
         <Skills data={data.allSkillsJson.edges.map((e) => e.node)} />
         <Work data={data.allProjectsJson.edges.map((e) => e.node)} />
+        <Contact />
       </main>
     </ThemeProvider>
   );
