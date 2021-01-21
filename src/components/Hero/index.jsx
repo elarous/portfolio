@@ -12,7 +12,7 @@ function Hero() {
       <Description>
         I'm a web developer, I code using  React & Ruby on Rails, I am a big fan of Functional programming especially Clojure.
       </Description>
-      <Button href="mailto:elarbaouioussama@gmail.com" link>Contact me</Button>
+      <Button href="#contact_me" link>Contact me</Button>
     </Container>
   );
 }
