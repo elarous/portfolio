@@ -25,7 +25,7 @@ export const Description = styled.div`
 export const Illustration = styled(IllustrationSVG)`
   position: absolute;
   top: 0;
-  right: -4px;
+  right: 0px;
   z-index: -1;
   height: 100%;
 `

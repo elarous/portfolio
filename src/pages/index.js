@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 import Work from "../components/Work";
 import Contact from '../components/Contact'
 import Section from "../components/Section";
+import Footer from "../components/Footer";
 import { Illustration } from "../components/Hero/style"
 import "fontsource-open-sans";
 import { graphql } from "gatsby";
@@ -27,6 +28,7 @@ const IndexPage = ({ data }) => {
         <Skills data={data.allSkillsJson.edges.map((e) => e.node)} />
         <Work data={data.allProjectsJson.edges.map((e) => e.node)} />
         <Contact />
+        <Footer />
       </main>
     </ThemeProvider>
   );
