@@ -5,21 +5,26 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Work from "../components/Work";
-import Contact from '../components/Contact'
+import Contact from "../components/Contact";
 import Section from "../components/Section";
 import Footer from "../components/Footer";
-import { Illustration } from "../components/Hero/style"
+import { Illustration } from "../components/Hero/style";
 import "fontsource-open-sans";
 import { graphql } from "gatsby";
-import GlobalStyle from '../globalStyles'
+import GlobalStyle from "../globalStyles";
+import { Helmet } from "react-helmet";
 
 // markup
 const IndexPage = ({ data }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <main>
+      <Helmet>
+        <meta charSet="utf-8" />
         <title>Oussama El Arbaoui</title>
+        <link rel="canonical" href="https://elarous.com/" />
+      </Helmet>
+      <main>
         <Section>
           <Header />
           <Hero />

@@ -1,6 +1,7 @@
 module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
@@ -8,17 +9,17 @@ module.exports = {
     "gatsby-transformer-inline-svg-v2",
     "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/
-        }
-      }
+          include: /images/,
+        },
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "./data/"
+        path: "./data/",
       },
     },
   ],

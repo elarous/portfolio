@@ -6,6 +6,18 @@
     "url": "https://vidman.app/"
   },
   {
+    "name": "Scimmer",
+    "description": "An SCIM tool to make mapping SCIM resources to entities trivial",
+    "image": "./images/projects/scimmer.png",
+    "url": "https://github.com/elarous/scimmer"
+  },
+  {
+    "name": "Simple Blackjack",
+    "description": "A simplified version of blackjack with one player and less rules",
+    "image": "./images/projects/blackjack_web.png",
+    "url": "https://elarous.github.io/blackjack_cljs/index.html"
+  },
+  {
     "name": "O2SN",
     "description": "Open Source News Social Network, platform to share and rate news",
     "image": "./images/projects/o2sn.png",
